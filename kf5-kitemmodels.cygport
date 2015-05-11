@@ -1,0 +1,23 @@
+inherit kf5
+
+NAME="kf5-kitemmodels"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 item models library"
+DESCRIPTION="KItemModels provides a set of item models extending the Qt
+model-view framework."
+
+PKG_NAMES="libKF5ItemModels5 libKF5ItemModels-devel"
+libKF5ItemModels5_CONTENTS="
+	usr/bin/cygKF5ItemModels-5.dll
+	usr/share/doc/
+"
+libKF5ItemModels_devel_REQUIRES="libQt5Core-devel"
+libKF5ItemModels_devel_CONTENTS="
+	usr/include/KF5/KItemModels/
+	usr/include/KF5/kitemmodels_version.h
+	usr/lib/cmake/KF5ItemModels/
+	${QT5_MKSPECSDIR#/}/modules/qt_KItemModels.pri
+	usr/lib/libKF5ItemModels.dll.a
+"
