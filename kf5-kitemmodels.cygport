@@ -1,14 +1,14 @@
-inherit kf5
+inherit kf5 python2 python3
 
 NAME="kf5-kitemmodels"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 item models library"
 DESCRIPTION="KItemModels provides a set of item models extending the Qt
 model-view framework."
 
-PKG_NAMES="libKF5ItemModels5 libKF5ItemModels-devel"
+PKG_NAMES="libKF5ItemModels5 libKF5ItemModels-devel python2-pykf5-kitemmodels python3-pykf5-kitemmodels"
 libKF5ItemModels5_CONTENTS="
 	usr/bin/cygKF5ItemModels-5.dll
 	usr/share/doc/
@@ -20,4 +20,7 @@ libKF5ItemModels_devel_CONTENTS="
 	usr/lib/cmake/KF5ItemModels/
 	${QT5_MKSPECSDIR#/}/modules/qt_KItemModels.pri
 	usr/lib/libKF5ItemModels.dll.a
+	usr/share/sip/PyKF5/KItemModels/
 "
+python2_pykf5_kitemmodels_CONTENTS="${PYTHON2_SITELIB#/}/PyKF5/KItemModels.dll"
+python3_pykf5_kitemmodels_CONTENTS="${PYTHON3_SITELIB#/}/PyKF5/KItemModels.dll"
