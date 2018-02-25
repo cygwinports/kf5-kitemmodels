@@ -1,7 +1,7 @@
 inherit kf5 python2 python3
 
 NAME="kf5-kitemmodels"
-VERSION=5.39.0
+VERSION=5.43.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 item models library"
@@ -10,6 +10,7 @@ model-view framework."
 
 PKG_NAMES="libKF5ItemModels5 libKF5ItemModels-devel python2-pykf5-kitemmodels python3-pykf5-kitemmodels"
 libKF5ItemModels5_CONTENTS="
+	etc/xdg/kitemmodels.categories
 	usr/bin/cygKF5ItemModels-5.dll
 	usr/share/doc/
 "
